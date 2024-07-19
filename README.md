@@ -76,7 +76,7 @@ Mean Absolute Error: Y.YYYY
 - sell(symbol, quantity): Função para vender um ativo.
 - trading_strategy(): Estratégia de negociação baseada em previsões de preços.
 - main(): Função principal que coleta dados, calcula indicadores, treina o modelo e realiza a estratégia de negociação.
-- 
+  
 ## Contribuição
 Sinta-se à vontade para fazer um fork do projeto, abrir issues ou pull requests.
 
