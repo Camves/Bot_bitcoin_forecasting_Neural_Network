@@ -45,3 +45,40 @@ Execute o script para iniciar a coleta de dados e a negociação:
 
 ```bash
 python crypto.py
+```
+
+O script coletará dados históricos do par BTC/USDT da Binance, calculará indicadores técnicos, treinará um modelo LSTM e realizará previsões para decisões de compra e venda.
+
+## Exemplo de Saída
+
+```
+GPU Available:  True
+1 Physical GPUs, 1 Logical GPUs
+coletando dados
+dados coletados
+Train x shape: (N, 30, 10)
+Train y shape: (N,)
+Test x shape: (M, 30, 10)
+Test y shape: (M,)
+Epoch 1/10
+...
+Mean Squared Error: X.XXXX
+Mean Absolute Error: Y.YYYY
+
+```
+
+## Estrutura do Código
+- get_historical_data(symbol, interval, start, end): Função para obter dados históricos da Binance.
+- calculate_indicators(data): Função para calcular indicadores técnicos como SMA, RSI, Bandas de Bollinger e MACD.
+- prepare_data(data, look_back, scaler, is_train): Função para preparar dados de treinamento e teste.
+- predict_prices(model, data, look_back, scaler): Função para prever preços usando o modelo treinado.
+- buy(symbol, quantity): Função para comprar um ativo.
+- sell(symbol, quantity): Função para vender um ativo.
+- trading_strategy(): Estratégia de negociação baseada em previsões de preços.
+- main(): Função principal que coleta dados, calcula indicadores, treina o modelo e realiza a estratégia de negociação.
+- 
+## Contribuição
+Sinta-se à vontade para fazer um fork do projeto, abrir issues ou pull requests.
+
+## Licença
+Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
